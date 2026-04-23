@@ -1,0 +1,177 @@
+/* ================================
+   THEME VARIABLES
+================================ */
+:root {
+  /* Purple accents */
+  --color-primary: #7C5DFA;
+  --color-primary-light: #9277FF;
+
+  /* Status colors */
+  --color-paid: #33D69F;
+  --color-paid-bg: rgba(51, 214, 159, 0.06);
+  --color-pending: #FF8F00;
+  --color-pending-bg: rgba(255, 143, 0, 0.06);
+  --color-draft-bg: rgba(55, 59, 83, 0.06);
+
+  /* Danger */
+  --color-danger: #EC5757;
+  --color-danger-hover: #FF9797;
+
+  /* Typography */
+  --font-family: 'League Spartan', sans-serif;
+  --font-size-body: 0.75rem;
+
+  /* Transitions */
+  --transition: all 0.2s ease;
+}
+
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+
+/* ================================
+   LIGHT MODE
+================================ */
+body.light {
+  --color-bg: #F8F8FB;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F9FAFE;
+  --color-sidebar: #373B53;
+  --color-sidebar-bottom: #2E3250;
+  --color-border: #DFE3FA;
+  --color-text-primary: #0C0E16;
+  --color-text-secondary: #7E88C3;
+  --color-text-muted: #888EB0;
+  --color-input-bg: #FFFFFF;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-draft: #373B53;
+}
+
+/* ================================
+   DARK MODE
+================================ */
+body.dark {
+  --color-bg: #141625;
+  --color-surface: #1E2139;
+  --color-surface-alt: #252945;
+  --color-sidebar: #1E2139;
+  --color-sidebar-bottom: #252945;
+  --color-border: #252945;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #DFE3FA;
+  --color-text-muted: #888EB0;
+  --color-input-bg: #1E2139;
+  --color-overlay: rgba(0, 0, 0, 0.7);
+  --color-draft: #DFE3FA;
+}
+
+/* ================================
+   RESET & BASE
+================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-family);
+}
+
+input, select, textarea {
+  font-family: var(--font-family);
+}
+
+/* ================================
+   TYPOGRAPHY SCALE
+================================ */
+h1 { font-size: 2rem; font-weight: 700; letter-spacing: -1px; }
+h2 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.75px; }
+h3 { font-size: 0.9375rem; font-weight: 700; }
+
+/* ================================
+   SCROLLBAR (cosmetic)
+================================ */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 4px; }
+
+/* ================================
+   UTILITY
+================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+
+
+
+
+
+
+/* ================================
+   APP LAYOUT
+================================ */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 780px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Push main content away from fixed sidebar */
+.main-content {
+  margin-left: 103px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    margin-top: 72px;
+  }
+}
