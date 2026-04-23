@@ -35,7 +35,7 @@ export default function FilterDropdown() {
     return () => document.removeEventListener('keydown', handleKey)
   }, [])
 
-  const currentLabel = OPTIONS.find(o => o.value === filter)?.label ?? 'All'
+  // const _currentLabel = OPTIONS.find(o => o.value === filter)?.label ?? 'All'
 
   return (
     <div className={styles.wrapper} ref={ref}>
