@@ -61,7 +61,7 @@ export default function Sidebar() {
         <div className={styles.divider} aria-hidden="true" />
 
         <div className={styles.avatar} aria-label="User profile">
-          <img src="/src/assets/avatar.jpg" alt="User avatar" width="40" height="40" />
+          <img src="/avatar.jpg" alt="User avatar" width="40" height="40" />
         </div>
       </div>
     </aside>

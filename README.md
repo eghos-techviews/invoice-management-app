@@ -3,7 +3,7 @@
 A fully responsive invoice management application built with React + TypeScript.
 
 ## Live Demo
-[Add your Netlify URL here after deployment]
+stunning-crisp-f1d579.netlify.app
 
 ## Setup Instructions
 

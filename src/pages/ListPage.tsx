@@ -59,7 +59,7 @@ export default function ListPage({ onNewInvoice }: Props) {
               </g>
             </g>
           </svg> */}
-          <img src="/src/assets/campagne.jpg" alt="" aria-hidden="true" width="242" />
+          <img src="/campagne.jpg" alt="" aria-hidden="true" width="242" />
           <h2>Nothing here</h2>
           <p>Create an invoice by clicking the<br/><strong>New Invoice</strong> button</p>
         </div>
